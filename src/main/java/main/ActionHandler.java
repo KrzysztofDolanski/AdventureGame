@@ -43,8 +43,26 @@ public class ActionHandler implements ActionListener {
                 gameManager.ev1.fightViking();
                 break;
 
+                //scene2
+            case "lookCave":
+                gameManager.ev2.lookCave();
+            case "talkCave":
+                gameManager.ev2.talkCave();
+            case "enterCave":
+                gameManager.ev2.enterCave();
+            case "lookRoot":
+                gameManager.ev2.lookRoot();
+            case "talkRoot":
+                gameManager.ev2.talkRoot();
+            case "searchRoot":
+                gameManager.ev2.searchRoot();
+
             case "goScene1": gameManager.sceneChanger.showScene1();
             case "goScene2": gameManager.sceneChanger.showScene2();
+
+            case "restart":
+                gameManager.sceneChanger.existGameOverScreen();
+                gameManager.sceneChanger.showScene1(); break;
         }
     }
 
